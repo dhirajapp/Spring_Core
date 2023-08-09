@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	 
+	<bean id="tl" class="com.dhirajbareo.TechLead">
+		<property name="band" value="T2"></property>
+
+	</bean>
+	<bean id="maneger" class="com.dhirajbareo.Maneger">
+		<constructor-arg value="T1"></constructor-arg>
+	</bean>
+	<bean id="SeniorSoftwareEngineer" class="com.dhirajbareo.SeniorSoftwareEngineer"></bean>
+	
+	<!-- Annotation based  -->
+	<!--  
+	 <context:componement-scan base-package="com.dhirajbareo"></context:componement-scan>
+	 
+	 -->
+	
+
+</beans>
