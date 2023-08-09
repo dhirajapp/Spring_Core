@@ -1,6 +1,7 @@
 package com.dhirajbareo;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringFrameworkDemo {
@@ -12,8 +13,12 @@ public class SpringFrameworkDemo {
 		 */
 		
 		// lossely coupling
-		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
+		
+		// xml based
+	
+		 ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
 		 
+		
 		TechLead tl=context.getBean(TechLead.class);
 		Maneger maneger=(Maneger)context.getBean("maneger");
 		tl.assist();
@@ -29,6 +34,9 @@ public class SpringFrameworkDemo {
 		
 		Employee emp3=context.getBean(SeniorSoftwareEngineer.class);
 		emp3.assist();
+		
+		// Configrataion 
+		ApplicationContext context1=new AnnotationConfigApplicationContext(BeanConfig.class);
 		
 	}
 
