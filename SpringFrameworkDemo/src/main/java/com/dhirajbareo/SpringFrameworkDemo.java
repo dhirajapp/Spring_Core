@@ -17,7 +17,8 @@ public class SpringFrameworkDemo {
 		// xml based
 	
 		 ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
-		 
+		
+		
 		
 		TechLead tl=context.getBean(TechLead.class);
 		Maneger maneger=(Maneger)context.getBean("maneger");
@@ -32,11 +33,13 @@ public class SpringFrameworkDemo {
 		emp2.assist();
 		System.out.println(((Maneger) emp2).getBand());
 		
-		Employee emp3=context.getBean(SeniorSoftwareEngineer.class);
+		// Configrataion 
+				ApplicationContext context1=new AnnotationConfigApplicationContext(BeanConfig.class);
+		
+		Employee emp3=context1.getBean(SeniorSoftwareEngineer.class);
 		emp3.assist();
 		
-		// Configrataion 
-		ApplicationContext context1=new AnnotationConfigApplicationContext(BeanConfig.class);
+		
 		
 	}
 
