@@ -33,6 +33,7 @@ public class SpringFrameworkDemo {
 		emp2.assist();
 		System.out.println(((Maneger) emp2).getBand());
 		
+		
 		// Configrataion 
 				ApplicationContext context1=new AnnotationConfigApplicationContext(BeanConfig.class);
 		
