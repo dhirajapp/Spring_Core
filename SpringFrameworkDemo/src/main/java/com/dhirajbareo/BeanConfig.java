@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages="com.dhirajbareo")
 public class BeanConfig {
-	@Bean
-   public SeniorSoftwareEngineer eniorSoftwareEngineer() {
-	   return new SeniorSoftwareEngineer();
-   }
+	/*
+	 * @Bean public SeniorSoftwareEngineer eniorSoftwareEngineer() { return new
+	 * SeniorSoftwareEngineer(); }
+	 */
 }

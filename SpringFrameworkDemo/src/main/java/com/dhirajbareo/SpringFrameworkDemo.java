@@ -36,9 +36,16 @@ public class SpringFrameworkDemo {
 		
 		// Configrataion 
 				ApplicationContext context1=new AnnotationConfigApplicationContext(BeanConfig.class);
-		
-		Employee emp3=context1.getBean(SeniorSoftwareEngineer.class);
-		emp3.assist();
+		   Employee emp3=context1.getBean(SeniorSoftwareEngineer.class);
+		   emp3.assist();
+		   
+		   
+		   SeniorSoftwareEngineer sse=context1.getBean(SeniorSoftwareEngineer.class);
+		   sse.setBand("T4");
+		   System.out.println(sse);
+		   
+		   SeniorSoftwareEngineer sse1=context1.getBean(SeniorSoftwareEngineer.class);
+		   System.out.println(sse1);
 		
 		
 		
