@@ -1,5 +1,7 @@
 package com.dhirajbareo;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -35,5 +37,9 @@ public class SeniorSoftwareEngineer implements Employee,BeanNameAware{
 	public void setBeanName(String name) {
 		System.out.println("Set Bean name method is called ");
 		
+	}
+	@PostConstruct
+	public void postConstruct() {
+		System.out.println("post construct method is called");
 	}
 }
